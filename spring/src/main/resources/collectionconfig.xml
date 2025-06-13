@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+            <bean name="emp1" class="injectingcollection.Emp">
+                <property name="name" value="Vaibhav"/>
+                <property name="phones">
+                    <list>
+                        <value>501</value>
+                        <value>502</value>
+                        <value>503</value>
+                    </list>
+                </property>
+
+                <property name="addresses">
+                    <set>
+                        <value>Mumbai</value>
+                        <value>Nagpur</value>
+                        <value>Pune</value>
+                    </set>
+                </property>
+                <property name="courses">
+                    <map>
+                        <entry key="java" value="2months"/>
+                        <entry key="python" value="3months"/>
+                        <entry key="Devops" value="4months"/>
+                    </map>
+                </property>
+                <property name="config">
+                    <props>
+                        <prop key="env">dev</prop>
+                        <prop key="version">1.0</prop>
+                        <prop key="country">India</prop>
+                    </props>
+                </property>
+            </bean>
+</beans>
